@@ -1,5 +1,50 @@
 # InnovateFPGA-AP044
 A project proposing a design model with a theme of Connecting the Edge for a Sustainable future.
 
-Technical paper(https://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP044&All=1)
-![block](https://user-images.githubusercontent.com/87360204/163708462-274ccf55-7a4d-47e3-b6c3-7a812e35f392.jpeg)
+Wildfire Prevention - Way to Conserve Biodiversity
+![image](https://user-images.githubusercontent.com/87360204/163711020-77a0f129-1e88-46b6-8cd2-605ba0630ce8.png)
+ 
+Block Diagram 
+ ![block](https://user-images.githubusercontent.com/87360204/163711066-0c3aa194-3ba9-4f1e-9bcf-1c4748dbc4ca.jpeg)
+
+Functional description & Implementation
+Our proposed model has 2 phases:
+
+1. Mapping of highly probable wildfire regions:
+We start with studying the nature of the forest and the factors that affect the occurrence of fire in the region. This study helps us in mapping the hotspots by computing the probability of occurrence of fire by Machine Learning models and deploying these models on Azure cloud for continuous monitoring purpose.
+
+2. Early Detection of Wildfires:
+The hotspots mapped in the previous step are our area of study where the FPGA cloud connectivity kits are placed. These kits are equipped with various sensors for measuring Temperature, Humidity, Flame detection, Gas sensors, Wind sensors for monitoring these hotspots clearly to understand the behaviour of forest fires and these sensors help in early detection of forest fire and alert the responsible authority.
+![flow](https://user-images.githubusercontent.com/87360204/163711106-371391ef-7af2-45d4-bb54-41936308ff5e.png)
+ 
+![kit](https://user-images.githubusercontent.com/87360204/163711116-c1756aa2-c24c-4fbe-a659-d14634ce0ac9.png)
+ 
+fig. a) Software Flow Diagram                                         fig. b) Hardware connection Diagram
+
+I. Software Flow diagram: Software part of the project is mainly focused on Predicting and Mapping the forest fire vulnerable hotspots clearly on the map. 
+1. Prediction of Probability of fire occurrence in a region: The dataset consisting of the climate parameters that affect wildfires such as Temperature, Humidity, Dew Point, Wind speed, Pressure etc. are collected and are processed and divided into training and validation set to train and test the ML model.
+So first the training set is divided into construction and prediction set. This will be used to train the model and to check whether the model is able to predict the required result efficiently and accurately. Several Machine Learning algorithms have been tested and performance evaluation for each algorithm is done. And based on the evaluation XGBOOST algorithm is chosen to optimize the model.
+This model is then fed with the validation set data to predict the probability of fire.
+2. Mapping of the highly fire prone regions. The predicted output from the previous step for the given data is used to map fire hotspots in the region using a geospatial tool. The mapping output predicts the regions where the probability of fire occurrence is greater than a particular cut off. These hotspots are our regions of study to understand the behaviour of forest fires and their behaviour towards different parameters which could vary for every forest under consideration.
+The above model is deployed on Microsoft Azure Cloud for remote access of these data and continuous monitoring of data for the model considered. 
+ 
+II. Hardware Block diagram: The DE10 Nano SoC board is the main focus in this project. The DE10 Nano provided with RFS Daughter Card which has inbuilt Wifi, Bluetooth, Sensors such as Temperature, Humidity, Accelerometer, etc. We have made use of this inbuilt sensors for Temperature, Humidity measurements as they are correlated to the fire occurrence. RFS Daughter Card is connected to DE10 Nano Board using JTAG Cable through GPIO 0 pin of the DE10 Nano Board.
+We have also used IR Flame Sensor which is used to measure the presence/absence of flame in the IR range. IR Flame sensors are connected to DE10 Nano board using ADC pins where we have connected as shown in fig.b)
+These sensor values are continuously processed and sent to Azure's cloud services IoT Hub where it undergoes various computations and send an Alert message in the form or HTTP or SMS services to the respective organisation or person if any thresholds are crossed.
+ 
+Results
+Temperature & Humidity Sensor Outputs: 
+![sen1](https://user-images.githubusercontent.com/87360204/163711190-bb36f09f-fa7c-4fe2-8e2e-c9ebdbd078d2.jpeg)
+      
+Flame Sensors Outputs:
+![sen2](https://user-images.githubusercontent.com/87360204/163711207-4aa71d19-d5f3-4d00-8039-ac6057d4a586.jpeg)
+
+MAPPING OUTPUTS:
+![model](https://user-images.githubusercontent.com/87360204/163711214-d6b44990-ca48-4bff-8540-2da5ec7b6e07.jpeg)
+![Screenshot (578)](https://user-images.githubusercontent.com/87360204/163711241-20a3b064-ceda-4071-a6af-211cf2f55551.png)
+   
+ 
+
+             
+                                                                                                                                                                 
+
