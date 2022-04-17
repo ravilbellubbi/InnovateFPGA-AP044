@@ -15,6 +15,7 @@ We start with studying the nature of the forest and the factors that affect the 
 
 2. Early Detection of Wildfires:
 The hotspots mapped in the previous step are our area of study where the FPGA cloud connectivity kits are placed. These kits are equipped with various sensors for measuring Temperature, Humidity, Flame detection, Gas sensors, Wind sensors for monitoring these hotspots clearly to understand the behaviour of forest fires and these sensors help in early detection of forest fire and alert the responsible authority.
+
 ![flow1](https://user-images.githubusercontent.com/87360204/163711427-736895ac-ac9d-491e-82f1-15bd071bf497.png)
  
 ![kit1](https://user-images.githubusercontent.com/87360204/163711474-320d0de2-5108-4fad-b2a1-cbaba31bf873.png)
