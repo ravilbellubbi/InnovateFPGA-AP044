@@ -49,7 +49,8 @@ MAPPING OUTPUTS:
 
 ![Screenshot (578)](https://user-images.githubusercontent.com/87360204/163711241-20a3b064-ceda-4071-a6af-211cf2f55551.png)
    
- 
+ The design can be run with using codes in ADC & DE10_NANO_RFS_SENSOR directories.
+ Link to InnovateFPGA Project Page: https://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP044&All=1 
 
              
                                                                                                                                                                  
