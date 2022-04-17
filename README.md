@@ -1,11 +1,11 @@
 # InnovateFPGA-AP044
 A project proposing a design model with a theme of Connecting the Edge for a Sustainable future.
 
-Wildfire Prevention - Way to Conserve Biodiversity
-
 The design can be run with using codes in ADC & DE10_NANO_RFS_SENSOR directories. 
 
 Link to InnovateFPGA Project Page: https://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP044&All=1
+
+Wildfire Prevention - Way to Conserve Biodiversity
 
 ![image](https://user-images.githubusercontent.com/87360204/163711020-77a0f129-1e88-46b6-8cd2-605ba0630ce8.png)
  
