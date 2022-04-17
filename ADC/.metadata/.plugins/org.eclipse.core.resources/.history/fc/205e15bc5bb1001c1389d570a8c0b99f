@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <io.h>
+#include <unistd.h>
+#include <math.h>
+
+#include "system.h"
+
+void main(void){
+	int ch = 0;
+	const int nReadNum = 10; // max 1024
+	int i, Value=0;
+	//int a = 0;
+	float R1 = 10000;
+	float c1 = 0.01129148, c2 = 0.000000125, c3 = 0.000000000041;
+	float logR2, R2, T;
+	//printf("Enter the sensor value, 1 for temp sensor, 2 for eda, 3 for Gas, 4 for Light");
+
+	while(1){
+		ch = IORD(SW_BASE, 0x00) & 0x07;
+
+		IOWR(ADC_LTC2308_BASE, 0x01, nReadNum);
+
+
+		// start measure
+		IOWR(ADC_LTC2308_BASE, 0x00, (ch << 1) | 0x00);
+		IOWR(ADC_LTC2308_BASE, 0x00, (ch << 1) | 0x01);
+		IOWR(ADC_LTC2308_BASE, 0x00, (ch << 1) | 0x00);
+		usleep(1);
+
+		// wait measure done
+		while ((IORD(ADC_LTC2308_BASE,0x00) & 0x01) == 0x00);
+
+		// read adc value
+		for(i=0;i<nReadNum;i++){
+			Value = IORD(ADC_LTC2308_BASE, 0x01);
+
+			R2= R1 * (1023.0 / (((float)Value/1000.0)*60)-1.0);
+		    while(R2){
+			logR2 = log(R2);
+			T = (1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2));
+			T = T - 60;
+			printf("Value=%.3f /n",T);
+		    }
+		 /* R2 = R1 * (1023.0 / (((float)Value/1000.0)*45)- 1.0);
+		    while(R2){
+		    	logR2 = log(R2);
+		    	T = (1.0 / (c1 + c2*logR2 + c3*logR2*logR2*logR2));
+		    	T = T - 60;
+		    	printf("Value=%.3f /n",T);
+		    }*/
+
+		//<182.752){
+			//intf("Fire save the forest!!!");
+
+	//lse{
+	//printf("No fire forest is safe");
+
+		usleep(200*1000);
+	} // while
+
+	}
