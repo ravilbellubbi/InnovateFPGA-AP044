@@ -2,12 +2,15 @@
 A project proposing a design model with a theme of Connecting the Edge for a Sustainable future.
 
 Wildfire Prevention - Way to Conserve Biodiversity
+
 ![image](https://user-images.githubusercontent.com/87360204/163711020-77a0f129-1e88-46b6-8cd2-605ba0630ce8.png)
  
 Block Diagram 
+
  ![block](https://user-images.githubusercontent.com/87360204/163711066-0c3aa194-3ba9-4f1e-9bcf-1c4748dbc4ca.jpeg)
 
 Functional description & Implementation
+
 Our proposed model has 2 phases:
 
 1. Mapping of highly probable wildfire regions:
@@ -34,6 +37,7 @@ We have also used IR Flame Sensor which is used to measure the presence/absence 
 These sensor values are continuously processed and sent to Azure's cloud services IoT Hub where it undergoes various computations and send an Alert message in the form or HTTP or SMS services to the respective organisation or person if any thresholds are crossed.
  
 Results
+
 Temperature & Humidity Sensor Outputs: 
 ![sen1_1](https://user-images.githubusercontent.com/87360204/163711609-ecc90b27-adfd-4d0e-8524-76f36692fc54.jpeg)
       
