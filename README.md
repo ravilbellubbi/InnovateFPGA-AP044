@@ -3,6 +3,9 @@ A project proposing a design model with a theme of Connecting the Edge for a Sus
 
 Wildfire Prevention - Way to Conserve Biodiversity
 
+The design can be run with using codes in ADC & DE10_NANO_RFS_SENSOR directories.
+Link to InnovateFPGA Project Page: https://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP044&All=1
+
 ![image](https://user-images.githubusercontent.com/87360204/163711020-77a0f129-1e88-46b6-8cd2-605ba0630ce8.png)
  
 Block Diagram 
@@ -49,8 +52,7 @@ MAPPING OUTPUTS:
 
 ![Screenshot (578)](https://user-images.githubusercontent.com/87360204/163711241-20a3b064-ceda-4071-a6af-211cf2f55551.png)
    
- The design can be run with using codes in ADC & DE10_NANO_RFS_SENSOR directories.
- Link to InnovateFPGA Project Page: https://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP044&All=1 
+ 
 
              
                                                                                                                                                                  
