@@ -35,10 +35,10 @@ These sensor values are continuously processed and sent to Azure's cloud service
  
 Results
 Temperature & Humidity Sensor Outputs: 
-![sen1](https://user-images.githubusercontent.com/87360204/163711190-bb36f09f-fa7c-4fe2-8e2e-c9ebdbd078d2.jpeg)
+![sen1_1](https://user-images.githubusercontent.com/87360204/163711609-ecc90b27-adfd-4d0e-8524-76f36692fc54.jpeg)
       
 Flame Sensors Outputs:
-![sen2](https://user-images.githubusercontent.com/87360204/163711207-4aa71d19-d5f3-4d00-8039-ac6057d4a586.jpeg)
+![sen2_1](https://user-images.githubusercontent.com/87360204/163711649-b8f31a74-578c-467a-9b33-922ab5a62e09.jpeg)
 
 MAPPING OUTPUTS:
 ![model](https://user-images.githubusercontent.com/87360204/163711214-d6b44990-ca48-4bff-8540-2da5ec7b6e07.jpeg)
