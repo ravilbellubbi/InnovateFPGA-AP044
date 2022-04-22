@@ -26,9 +26,10 @@ The hotspots mapped in the previous step are our area of study where the FPGA cl
 ![flow1](https://user-images.githubusercontent.com/87360204/163711427-736895ac-ac9d-491e-82f1-15bd071bf497.png)
  
 ![kit1](https://user-images.githubusercontent.com/87360204/163711474-320d0de2-5108-4fad-b2a1-cbaba31bf873.png)
- 
-fig. a) Software Flow Diagram                                         fig. b) Hardware connection Diagram
 
+![WhatsApp Image 2022-04-22 at 9 46 11 AM (1)](https://user-images.githubusercontent.com/87360204/164692161-a43e6a26-48cc-4035-bced-dc946a1a670c.jpeg)
+ 
+fig. a) Software Flow Diagram                           fig. b) Hardware connection Diagram                           fig. 3 Smart Kit with Loom Solar panel source.                             
 I. Software Flow diagram: Software part of the project is mainly focused on Predicting and Mapping the forest fire vulnerable hotspots clearly on the map. 
 1. Prediction of Probability of fire occurrence in a region: The dataset consisting of the climate parameters that affect wildfires such as Temperature, Humidity, Dew Point, Wind speed, Pressure etc. are collected and are processed and divided into training and validation set to train and test the ML model.
 So first the training set is divided into construction and prediction set. This will be used to train the model and to check whether the model is able to predict the required result efficiently and accurately. Several Machine Learning algorithms have been tested and performance evaluation for each algorithm is done. And based on the evaluation XGBOOST algorithm is chosen to optimize the model.
@@ -39,6 +40,7 @@ The above model is deployed on Microsoft Azure Cloud for remote access of these 
 II. Hardware Block diagram: The DE10 Nano SoC board is the main focus in this project. The DE10 Nano provided with RFS Daughter Card which has inbuilt Wifi, Bluetooth, Sensors such as Temperature, Humidity, Accelerometer, etc. We have made use of this inbuilt sensors for Temperature, Humidity measurements as they are correlated to the fire occurrence. RFS Daughter Card is connected to DE10 Nano Board using JTAG Cable through GPIO 0 pin of the DE10 Nano Board.
 We have also used IR Flame Sensor which is used to measure the presence/absence of flame in the IR range. IR Flame sensors are connected to DE10 Nano board using ADC pins where we have connected as shown in fig.b)
 These sensor values are continuously processed and sent to Azure's cloud services IoT Hub where it undergoes various computations and send an Alert message in the form or HTTP or SMS services to the respective organisation or person if any thresholds are crossed.
+We have used Loom solar panel to power the Smart Kit (shown in fig.c). Throughout the day, the Kit will be powered directly from the Solar panel via Voltage controller. We will charge batteries also simultaneously so that we can use them as a source during Night time.
  
 Results
 
