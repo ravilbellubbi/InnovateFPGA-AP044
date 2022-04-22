@@ -29,7 +29,8 @@ The hotspots mapped in the previous step are our area of study where the FPGA cl
 
 ![WhatsApp Image 2022-04-22 at 9 46 11 AM (1)](https://user-images.githubusercontent.com/87360204/164692161-a43e6a26-48cc-4035-bced-dc946a1a670c.jpeg)
  
-fig. a) Software Flow Diagram                           fig. b) Hardware connection Diagram                           fig. 3 Smart Kit with Loom Solar panel source.                             
+fig. a) Software Flow Diagram                           fig. b) Hardware connection Diagram                           fig. 3 Smart Kit with Loom Solar panel source.          
+
 I. Software Flow diagram: Software part of the project is mainly focused on Predicting and Mapping the forest fire vulnerable hotspots clearly on the map. 
 1. Prediction of Probability of fire occurrence in a region: The dataset consisting of the climate parameters that affect wildfires such as Temperature, Humidity, Dew Point, Wind speed, Pressure etc. are collected and are processed and divided into training and validation set to train and test the ML model.
 So first the training set is divided into construction and prediction set. This will be used to train the model and to check whether the model is able to predict the required result efficiently and accurately. Several Machine Learning algorithms have been tested and performance evaluation for each algorithm is done. And based on the evaluation XGBOOST algorithm is chosen to optimize the model.
